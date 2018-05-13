@@ -1,0 +1,91 @@
+
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-body {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.App-content {
+  flex: auto;
+  width:40%;
+  margin-bottom: 5%;
+  margin-top: 20px;
+}
+
+.App-taskGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-items {
+  display: flex;
+  flex:auto;
+  margin-top: 10px;
+  border-bottom: 0.05em solid;
+  border-color: #9B9B9B;
+  margin-right: 10%;
+  margin-left: 10%;
+  padding: 20px;
+  padding-left: 0px;
+}
+
+.App-taskGroupHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 1.5em;
+  border-bottom: 0.05em solid;
+  border-color: #9B9B9B;
+  padding: 20px;
+  padding-left: 0px;
+  align-items: baseline;
+  font-weight: bold
+}
+
+.All-Group-link {
+  font-size: 0.5em;
+  text-decoration:none;
+  color: #61DAFB;
+  padding-right: 0;
+  cursor: pointer;
+}
+
+#TaskName {
+  padding-left:2em;
+  font-weight: bold;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.locked {
+  color: #9B9B9B;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
