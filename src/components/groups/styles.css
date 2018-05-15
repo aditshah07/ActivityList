@@ -1,0 +1,17 @@
+.group .group-logo {
+  padding-top: 10px;
+  padding-bottom: 14px;
+  cursor: pointer;
+}
+
+.group .group-img {
+  margin-left: 10;
+  margin-top: 10px;
+}
+
+.group .group-locked {
+  margin: 0;
+  font-weight: normal;
+  font-size: small;
+  margin-left: 2.5em
+}
