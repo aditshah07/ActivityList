@@ -32,13 +32,14 @@ const createDataMap = taskList => {
     groupMap,
     taskIdMap
   };
-};
+}; 
 
 // Adding dependentOn and dependentBy to to avoid repetitive loops
 const addTaskDependencies = (taskList, taskIdMap) => {
   taskList.forEach(task => {
     if (!task.completedAt) {
       let isLocked = false;
+
       task.dependencyIds.forEach(dependent => {
         // no dependency in response or dependent task is incomplete, lock it
         if (!taskIdMap[dependent] || !taskIdMap[dependent].completedAt)
@@ -122,7 +123,7 @@ class App extends Component {
 
   // When task is clicked we check it's status is incomplete.
   // Then we change the status to complete and update the dependentBy task, otherwise do nothing 
-  onClickedListItem = (group, id) => {
+  onClickedTask = (group, id) => {
     const taskIdMap = this.state.taskIdMap;
     const displayGroup = this.state.displayGroup;
 
@@ -161,7 +162,6 @@ class App extends Component {
     for (let group in groupMap) {
       (groupMap[group]).isCollapsed = true;
     }
-    console.log(groupMap);
     this.setState({
       groupMap
     });
@@ -185,7 +185,7 @@ class App extends Component {
               groups = {this.state.displayGroup}
               groupMap = {this.state.groupMap}
               onClickedGroup = {this.onClickedGroup}
-              onClickedListItem = {this.onClickedListItem}
+              onClickedTask = {this.onClickedTask}
               taskIdMap = {this.state.taskIdMap}/> :
             null}
         </div>

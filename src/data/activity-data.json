@@ -38,7 +38,7 @@
     "id": 6,
     "group": "Build Airplane",
     "task": "Hammer nails into wood",
-    "dependencyIds": [],
+    "dependencyIds": [2, 3, 4, 5],
     "completedAt": null
   },
   {

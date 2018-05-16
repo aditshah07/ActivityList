@@ -25,7 +25,7 @@ class Groups extends Component {
             {!groupMap[list.group] ? null : groupMap[list.group].isCollapsed ?
               <Tasks 
                 groupMap={groupMap}
-                onClickedListItem={this.props.onClickedListItem}
+                onClickedTask={this.props.onClickedTask}
                 taskIdMap={taskIdMap}
                 taskCompletePrint={this.props.taskCompletePrint}
                 taskIncompletePrint={this.props.taskIncompletePrint}

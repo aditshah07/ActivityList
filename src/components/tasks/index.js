@@ -36,7 +36,7 @@ class Tasks extends Component {
   render = () => ((
     <div>
       {this.props.groupMap[this.props.groupName].map(list => (
-        <span key= {list.id} onClick={() => { this.props.onClickedListItem(list.group, list.id) }}>
+        <span key= {list.id} onClick={() => { this.props.onClickedTask(list.group, list.id) }}>
           {this.renderTask(list)}
         </span>
       ))}
