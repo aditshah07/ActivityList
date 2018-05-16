@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './application/index';
-import data from './data/activity-data.json';
 import renderer from 'react-test-renderer';
+
+import App from '../application/index';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -104,9 +104,17 @@ it('Check onClickedTask', () => {
 	// Run function onClickedTask
 	component.getInstance().onClickedTask('Purchases', 1)
 
+	component.getInstance().onClickedTask('Purchases', 2)
+
+	component.getInstance().onClickedTask('Purchases', 6)
+
 	expect(component.getInstance().state.taskIdMap[1].status).toBe('complete')
 
-	expect(component.getInstance().state.taskIdMap[2].status).toBe('incomplete')
+	component.getInstance().onClickedTask('Purchases', 1)
+
+	expect(component.getInstance().state.taskIdMap[1].status).toBe('complete')
+
+	expect(component.getInstance().state.taskIdMap[2].status).toBe('complete')
 
 	expect(component.getInstance().state.taskIdMap[3].status).toBe('incomplete')
 
