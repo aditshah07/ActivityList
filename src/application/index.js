@@ -101,6 +101,7 @@ class App extends Component {
     // when it gets complete it will change the status of the task dependent on it.
     addTaskDependencies(taskList, taskIdMap);
 
+    // Creating an array of groupMap and other properties eg. Completed Task, Total Task for rendering
     const displayGroup = createDisplayGroup(groupMap);
 
     this.setState({
@@ -118,7 +119,7 @@ class App extends Component {
 
     this.setState({
       groupMap
-    })
+    });
   }
 
   // When task is clicked we check it's status is incomplete.
@@ -143,7 +144,7 @@ class App extends Component {
           const index = taskIdMap[dependent].dependentOn.indexOf(taskIdMap[id]);
           taskIdMap[dependent].dependentOn.splice(index, 1);
 
-          if (!taskIdMap[dependent].dependentOn.length){
+          if (!taskIdMap[dependent].dependentOn.length) {
             taskIdMap[dependent].status = "incomplete";
           }
         }
